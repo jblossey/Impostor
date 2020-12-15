@@ -42,7 +42,7 @@ COPY --from=build /app ./
 COPY --from=build /source/src/Impostor.Server/config.json ./
 
 # Replace PublicIP on Run
-ENV PUBLICIP=127.0.0.1
+ARG PUBLICIP
 RUN sed -i -r "s/Replace with your external facing IP/${PUBLICIP}/g" ./config.json 
 
 EXPOSE 22023/udp
