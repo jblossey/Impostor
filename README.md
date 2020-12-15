@@ -1,6 +1,6 @@
 Local Addendum:  
 To execute the all-in-one solution build the image with `docker build -t impostor --build-arg TARGETARCH=arm64 --build-arg PUBLICIP=<your public ip>.`  
-Run the Container with `docker run -p 22023:22023 impostor`  
+Run the Container with `docker run -p 22023:22023/udp impostor`  
 
 # Impostor
 
