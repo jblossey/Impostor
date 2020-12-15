@@ -36,7 +36,7 @@ RUN case "$TARGETARCH" in \
   dotnet publish -c release -o /app -r "$NETCORE_PLATFORM" --no-restore ./src/Electric.AUProximity/Electric.AUProximity.csproj
 
 # Final image.
-FROM --platform=amd64 mcr.microsoft.com/dotnet/runtime:5.0
+FROM --platform=arm64 mcr.microsoft.com/dotnet/runtime:5.0
 WORKDIR /app
 COPY --from=build /app ./
 COPY --from=build /source/src/Impostor.Server/config.json ./
