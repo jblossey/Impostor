@@ -1,3 +1,7 @@
+Local Addendum:
+To execute the all-in-one solution build the image with `docker build -t impostor --build-arg TARGETARCH=arm64 .`
+Run the Container with `docker run -p 22023:22023 -e PUBLICIP=<your public ip address> impostor`
+
 # Impostor
 
 [![Discord](https://img.shields.io/badge/Discord-chat-blue?style=flat-square)](https://discord.gg/Mk3w6Tb)
